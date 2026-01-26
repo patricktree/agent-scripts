@@ -1,0 +1,59 @@
+{
+  "version": 3,
+  "skills": {
+    "supabase-postgres-best-practices": {
+      "source": "supabase/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/supabase/agent-skills.git",
+      "skillPath": "skills/postgres-best-practices/SKILL.md",
+      "skillFolderHash": "e549f070fca7ca2284e06f17e8a27260443aaf0d",
+      "installedAt": "2026-01-23T13:17:05.967Z",
+      "updatedAt": "2026-01-23T17:53:00.253Z"
+    },
+    "vercel-react-best-practices": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
+      "skillPath": "skills/react-best-practices/SKILL.md",
+      "skillFolderHash": "b86e3967846abb5beeeb874410d8f2ebf6a3f5e1",
+      "installedAt": "2026-01-24T11:41:05.578Z",
+      "updatedAt": "2026-01-24T11:41:05.578Z"
+    },
+    "turborepo": {
+      "source": "vercel/turborepo",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel/turborepo.git",
+      "skillPath": "skills/turborepo/SKILL.md",
+      "skillFolderHash": "8a090a1bd903c749f81466660446b96ed606bf13",
+      "installedAt": "2026-01-24T11:43:22.780Z",
+      "updatedAt": "2026-01-24T11:43:22.780Z"
+    },
+    "playwright-cli": {
+      "source": "microsoft/playwright-cli",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/microsoft/playwright-cli.git",
+      "skillPath": "skills/playwright-cli/SKILL.md",
+      "skillFolderHash": "834ec5a02bc1ed5174173694a6849dce2fb1bf8e",
+      "installedAt": "2026-01-24T20:19:15.944Z",
+      "updatedAt": "2026-01-24T20:19:15.944Z"
+    },
+    "dex": {
+      "source": "dcramer/dex",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dcramer/dex.git",
+      "skillPath": "plugins/dex/skills/dex/SKILL.md",
+      "skillFolderHash": "56afd618ea31de23db83c11f26251e352c3aab31",
+      "installedAt": "2026-01-24T21:03:49.691Z",
+      "updatedAt": "2026-01-24T21:03:49.691Z"
+    },
+    "dex-plan": {
+      "source": "dcramer/dex",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dcramer/dex.git",
+      "skillPath": "plugins/dex/skills/dex-plan/SKILL.md",
+      "skillFolderHash": "beeebbbf177de7663ff247ac7f135ccf1ad13c08",
+      "installedAt": "2026-01-24T21:03:49.737Z",
+      "updatedAt": "2026-01-24T21:03:49.737Z"
+    }
+  }
+}
