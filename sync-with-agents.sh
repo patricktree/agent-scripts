@@ -7,7 +7,7 @@ CENTRAL_SKILLS_DIR="${SCRIPT_DIR}/skills"
 CLAUDE_DIR="${HOME}/.claude"
 CODEX_DIR="${HOME}/.codex"
 GITHUB_DIR="${HOME}/.github"
-PI_DIR="${HOME}/.pi"
+PI_DIR="${HOME}/.pi/agent"
 
 # copy AGENTS.md
 mkdir -p "${CLAUDE_DIR}" "${CODEX_DIR}" "${GITHUB_DIR}" "${PI_DIR}"
