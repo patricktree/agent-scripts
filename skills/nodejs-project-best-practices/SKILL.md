@@ -43,6 +43,7 @@ pnpm --version # must print the latest version
   "name": "<package-name>",
   "private": true,
   "type": "module",
+  "exports": { ".": null, "./*": null },
   "files": ["dist/**", "!dist/**/*.d.ts.map"],
   "scripts": {
     "dev": "tsc --watch --build ./tsconfig.json",
@@ -55,6 +56,9 @@ pnpm --version # must print the latest version
   }
 }
 ```
+
+- change `package.json#exports` if the package exports things
+  - e.g. `{ ".": "./dist/index.js", "./*": null }`
 
 ## `pnpm-workspace.yaml` (pnpm settings)
 
