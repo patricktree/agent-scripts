@@ -47,12 +47,32 @@ pnpm --version # must print the latest version
   "scripts": {
     "dev": "tsc --watch --build ./tsconfig.json",
     "build": "tsc --build ./tsconfig.json",
+    "format": "prettier --write --ignore-unknown .",
     "lint": "eslint --max-warnings 0 .",
     "lint:file": "eslint --max-warnings 0",
     "lint:file:fix": "eslint --max-warnings 0 --fix",
     "lint:fix": "eslint --max-warnings 0 . --fix"
   }
 }
+```
+
+## `pnpm-workspace.yaml` (pnpm settings)
+
+```yaml
+# enforce specific Node.js and pnpm version (https://pnpm.io/npmrc#engine-strict)
+engineStrict: true
+
+# handle peer dependencies in a strict way
+autoInstallPeers: false
+dedupePeerDependents: false
+strictPeerDependencies: true
+resolvePeersFromWorkspaceRoot: false
+
+# https://pnpm.io/npmrc#update-notifier
+updateNotifier: false
+
+# workspace-concurrency=0 will use amount of cores of the host to run tasks concurrently (see https://pnpm.io/cli/recursive#--workspace-concurrency)
+workspaceConcurrency: 0
 ```
 
 ## Prettier Setup
@@ -119,6 +139,8 @@ module.exports = {
 }
 ```
 
+- for Node.js projects, add `"node"` to `tsconfig.json#compilerOptions.types`
+
 ## ESLint Setup
 
 Install ESLint and all required plugins/configs:
@@ -172,7 +194,7 @@ module.exports = {
     "plugin:unicorn/recommended",
     "plugin:eslint-comments/recommended",
   ],
-  ignorePatterns: [".eslintrc.cjs", "dist/**/*"],
+  ignorePatterns: [".eslintrc.cjs", "prettier.config.cjs", "dist/**/*"],
   rules: {
     curly: "error",
     "multiline-comment-style": ["error", "starred-block"],
@@ -212,7 +234,6 @@ module.exports = {
     "import/newline-after-import": "error",
     "import/no-absolute-path": "error",
     "import/no-cycle": "error",
-    "import/no-default-export": "error",
     "import/no-duplicates": "error",
     "import/no-dynamic-require": "error",
     "import/no-mutable-exports": "error",
@@ -378,4 +399,14 @@ module.exports = {
     },
   ],
 };
+```
+
+## .gitignore
+
+Create `.gitignore`:
+
+```.gitignore
+**/node_modules
+**/dist
+**/*.tsbuildinfo
 ```
